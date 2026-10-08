@@ -1,0 +1,62 @@
+:root {
+  --bg: #fbfaf7;
+  --fg: #1c1b22;
+  --muted: #6b6878;
+  --line: #e4e1da;
+  --card: #ffffff;
+  --accent: #5b4bd6;
+  --good: #2f7d4f;
+  --warn: #a2571c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14131a;
+    --fg: #ecebf2;
+    --muted: #9a97a8;
+    --line: #2c2a36;
+    --card: #1c1b24;
+    --accent: #a79cff;
+    --good: #7fcf9c;
+    --warn: #e7a46b;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.55 ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+main { max-width: 52rem; margin: 0 auto; padding: 2.5rem 1rem 4rem; }
+h1 { font-size: 1.7rem; margin: 0 0 0.25rem; }
+h2 { font-size: 1.15rem; margin: 0 0 0.75rem; }
+p.lede { color: var(--muted); margin: 0 0 1.75rem; }
+
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 1rem 1.15rem; margin-bottom: 1rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 0.75rem; }
+label { display: block; font-size: 0.82rem; color: var(--muted); margin-bottom: 0.2rem; }
+input, select {
+  width: 100%; padding: 0.5rem 0.6rem; border-radius: 8px; border: 1px solid var(--line);
+  background: transparent; color: inherit; font: inherit;
+}
+.actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+button {
+  padding: 0.5rem 0.9rem; border-radius: 8px; border: 1px solid var(--accent); background: transparent;
+  color: var(--accent); font: inherit; cursor: pointer;
+}
+button.primary { background: var(--accent); color: var(--bg); }
+button:disabled { opacity: 0.5; cursor: progress; }
+.cost { font-size: 0.8rem; opacity: 0.8; }
+.error { border-color: var(--warn); color: var(--warn); }
+.muted { color: var(--muted); font-size: 0.88rem; }
+table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+th, td { text-align: left; padding: 0.3rem 0.5rem 0.3rem 0; border-bottom: 1px solid var(--line); }
+ul { margin: 0.25rem 0 0; padding-left: 1.2rem; }
+.tag { display: inline-block; font-size: 0.78rem; padding: 0.05rem 0.5rem; border: 1px solid var(--line); border-radius: 999px; margin-right: 0.35rem; }
+.good { color: var(--good); }
+.warn { color: var(--warn); }
+.scroll { overflow-x: auto; }
