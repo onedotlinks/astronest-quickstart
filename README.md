@@ -1,8 +1,10 @@
 # AstroNest: Vedic astrology for apps and AI agents
 
 [AstroNest](https://www.astronest.ai/developers) is a Vedic astrology (Jyotiṣa) engine you can call as a REST API
-or connect to an AI agent over MCP. It computes on its own JPL DE440 ephemeris, and the readings are deterministic:
-the same birth data always gives the same answer, with the reasons and the classical books each reading rests on.
+or connect to an AI agent over MCP. It computes on its own JPL DE440 ephemeris. The chart, periods and the readings
+(interpret, guidance, compatibility, guna milan) are deterministic: the same birth data always gives the same answer,
+with the reasons and the classical books each reading rests on. Only forecast and timing are worded by a language model,
+and they say so.
 
 This repository has two things: how to **connect AstroNest to an AI agent**, and a **Next.js quickstart** on the REST API.
 
@@ -10,6 +12,13 @@ This repository has two things: how to **connect AstroNest to an AI agent**, and
 - OpenAPI 3.1 spec: <https://www.astronest.ai/openapi/astronest-v1.json>
 - Postman: [AstroNest Developer API workspace](https://www.postman.com/onedotlinks-2238096/astronest-developer-api/collection/oam9lo2/astronest-developer-api)
 - Keys: <https://www.astronest.ai/developer>. Sandbox keys are free and return fixed samples.
+- Guides: [Kundli API](https://www.astronest.ai/developers/kundli-api) ·
+  [Guna Milan API](https://www.astronest.ai/developers/guna-milan-api) ·
+  [Muhūrta API](https://www.astronest.ai/developers/muhurta-api) ·
+  [Praśna API](https://www.astronest.ai/developers/prashna-api) ·
+  [Ephemeris API](https://www.astronest.ai/developers/ephemeris-api) ·
+  [Astrology MCP server](https://www.astronest.ai/developers/astrology-mcp-server)
+- For LLMs: <https://www.astronest.ai/llms.txt>
 
 ## Connect it to an AI agent (MCP)
 
