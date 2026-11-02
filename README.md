@@ -3,7 +3,7 @@
 [AstroNest](https://www.astronest.ai/developers) is a Vedic astrology (Jyotiṣa) engine you can call as a REST API
 or connect to an AI agent over MCP. It computes on its own JPL DE440 ephemeris. The chart, periods and the readings
 (interpret, guidance, compatibility, guna milan) are deterministic: the same birth data always gives the same answer,
-with the reasons and the classical books each reading rests on. Only forecast and timing are worded by a language model,
+with the reasons behind each reading. Only forecast and timing are worded by a language model,
 and they say so.
 
 This repository has two things: how to **connect AstroNest to an AI agent**, and a **Next.js quickstart** on the REST API.
@@ -62,7 +62,7 @@ reasons, not just positions:
 | `get_compatibility`, `get_guna_milan` | Kundli matching: the 36-point Aṣṭakūṭa score, Manglik from the lagna, Moon and Venus, and the full pair reading |
 | `interpret_domain`, `get_guidance` | What does my chart say about one area of life, and what do the running periods ask of me now? |
 | `find_muhurta` | Which days and windows in a date range suit an event? |
-| `get_chart`, `get_dasha`, ephemeris tools | The chart (with the sixteen divisional charts), Vimśottarī daśā to pratyantar, and raw JPL DE440 positions |
+| `get_chart`, `get_dasha`, ephemeris tools | The chart (with its classical sub-charts), the life-period (daśā) timeline down to the sub-sub-period, and raw JPL DE440 positions |
 
 The readings describe what the chart shows and why. They are symbolic interpretation, not predictions, and not
 medical, legal, financial or psychological advice; every response carries that disclaimer.
@@ -133,7 +133,7 @@ browser ──► /api/astronest/{chart|guidance|interpret} ──► AstroNest 
 | Endpoint | Credits | Notes |
 |---|---|---|
 | `POST /v1/chart` | 1 | add `location` for astrocartography and a relocated frame |
-| `POST /v1/dasha` | 1 | full Vimśottarī timeline |
+| `POST /v1/dasha` | 1 | the full life-period (daśā) timeline |
 | `POST /v1/guidance` | 3 | `referenceDate` for any other moment |
 | `POST /v1/interpret` | 5 | 15 domains |
 | `POST /v1/timing/resolve` | 7 | narrated by a language model; allow 90 s |
@@ -148,7 +148,7 @@ browser ──► /api/astronest/{chart|guidance|interpret} ──► AstroNest 
 | `POST /v1/gem-assessment` | 5 | should this chart wear this stone: the verdict, every ground for and against, how long the reason lasts |
 | `POST /v1/ephemeris/positions` | 0.1 | raw positions at a moment (JPL DE440); no birth data needed |
 | `POST /v1/ephemeris/angles` | 0.1 | ascendant, MC and house cusps for a moment and place |
-| `POST /v1/ephemeris/ayanamsa` | 0.1 | Lahiri, Raman, Krishnamurti, Fagan–Bradley |
+| `POST /v1/ephemeris/ayanamsa` | 0.1 | the ayanāṁśa value for a moment, from the supported set |
 | `POST /v1/ephemeris/sunrise` | 0.1 | sunrise, sunset and next sunrise for a local date |
 | `POST /v1/ephemeris/series` | 1 | per started 100 points, up to 1,000 |
 
