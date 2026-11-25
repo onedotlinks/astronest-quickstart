@@ -1,5 +1,7 @@
 # AstroNest: Vedic astrology for apps and AI agents
 
+[![AstroNest MCP connector](https://glama.ai/mcp/connectors/io.github.onedotlinks/astronest/badges/score.svg)](https://glama.ai/mcp/connectors/io.github.onedotlinks/astronest)
+
 [AstroNest](https://www.astronest.ai/developers) is a Vedic astrology (Jyotiṣa) engine you can call as a REST API
 or connect to an AI agent over MCP. It computes on its own JPL DE440 ephemeris. The chart, periods and the readings
 (interpret, guidance, compatibility, guna milan) are deterministic: the same birth data always gives the same answer,
